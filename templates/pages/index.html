@@ -1,0 +1,28 @@
+{% extends "base/page.html" %}
+
+{% block content %}
+    <form class="ui form" method="post" name="converter_form">{% csrf_token %}
+        <div class="row">
+            <div class="col-min-12">
+                <h3><small class="text-muted">Paste your BBCode into the left, hit submit, Markdown appears on the right.</small></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-min-5">
+                {{ converter_form }}
+            </div>
+            <div class="col-min-2">
+                &nbsp;
+            </div>
+            <div class="col-min-5">
+                <textarea name="mdcodes" id="mdcodes" cols="40" rows="10">{{ mdcodestring }}</textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-min-9">&nbsp;</div>
+            <div class="col-min-3 float-right">
+                <button type="submit" class="float-right">Submit</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -48,18 +48,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-# settings
-settings.py
-
-# sqlite3
-*.sqlite3
-*.sqlite3_bak
-/46.101.202.82.tlp
-/openpsych_db.sqlite3
-/.idea/workspace.xml
-/.idea/watcherTasks.xml
-/.idea/*.iml
-
 ###########################################
 # hmcclungiii - this is still letting many
 # things into the repo that don't need to
@@ -80,12 +68,3 @@ __pycache
 /__pycache__
 /__pycache__/
 __pycache__/
-
-# don't want the static folder since it is generated
-static/
-files/
-
-# hmcclungiii - had to add the following line when
-# adding the gecko driver, we don't need its log
-# file in the repository
-geckodriver.log
