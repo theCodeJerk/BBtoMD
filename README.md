@@ -1,6 +1,6 @@
 ## BB Code to MarkDown Converter ##
 
-Convert BB Code to Markdown using bridge between Python and Javascript.
+Converts BB Code to Markdown on the server side.
 
 Uses the bbcode and html2text libraries to perform the conversion.
 
