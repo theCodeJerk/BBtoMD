@@ -1,17 +1,18 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from django.views.generic import TemplateView
-from django.contrib.auth.decorators import user_passes_test
-from django.shortcuts import render
-from django import forms
 import sqlite3
 import string
 import random
+from django.contrib.auth.decorators import user_passes_test
+from django.conf import settings
+from django.views.generic import TemplateView
+from django.shortcuts import render
+from django import forms
 from . import models
 import bbcode
 import html2text
-from django.conf import settings
+
 
 class ConverterForm(forms.ModelForm):
     class Meta:
