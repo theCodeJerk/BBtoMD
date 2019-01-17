@@ -1,5 +1,5 @@
+bbcode==1.0.32
 Django==2.1.5
-jiphy==1.2.2
-PyExecJS==1.5.1
+html2text==2018.1.9
 pytz==2018.9
 six==1.12.0

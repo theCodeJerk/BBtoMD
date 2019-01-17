@@ -1,6 +1,4 @@
 from django.shortcuts import render
-import jiphy
-import execjs
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views.generic import TemplateView
@@ -11,6 +9,9 @@ import sqlite3
 import string
 import random
 from . import models
+import bbcode
+import html2text
+from django.conf import settings
 
 class ConverterForm(forms.ModelForm):
     class Meta:
@@ -30,10 +31,11 @@ class ConverterView(TemplateView):
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
-            jsfile = open("static/js/bbtomd.js").read()
-            ctx = execjs.compile(jsfile)
             mybbcodes = request.POST['bbcodes']
-            mymdcodes = ctx.call("convert", mybbcodes)
+            html = bbcode.render_html(mybbcodes)
+            h = html2text.HTML2Text()
+            h.body_width = 0
+            mymdcodes = h.handle(html)
 
-        return render(request, self.template_name, {'converter_form': form, 'mdcodestring': mymdcodes})
+        return render(request, self.template_name, {'converter_form': form, 'mdcodestring': mymdcodes })
 
