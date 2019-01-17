@@ -71,7 +71,7 @@ class ConverterForm(forms.ModelForm):
 class ConverterView(TemplateView):
     form_class = ConverterForm
     initial = {'key': 'value'}
-    template_name = 'index.html'
+    template_name = 'pages/index.html'
 
     def get(self, request, *args, **kwargs):
         form = self.form_class
