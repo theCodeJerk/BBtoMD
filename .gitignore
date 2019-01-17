@@ -1,0 +1,91 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Gradle:
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-debug/
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# settings
+settings.py
+
+# sqlite3
+*.sqlite3
+*.sqlite3_bak
+/46.101.202.82.tlp
+/openpsych_db.sqlite3
+/.idea/workspace.xml
+/.idea/watcherTasks.xml
+/.idea/*.iml
+
+###########################################
+# hmcclungiii - this is still letting many
+# things into the repo that don't need to
+# be there, hopefully this addendum will
+# catch everything else
+#
+# Somehow .idea manages to slip in there
+# all the time, this should take care of
+# it for good, if not I'm going to scream
+/.idea
+/.idea/
+.idea
+.idea/
+# Now all those cache and compiled bytecode
+# files need to go
+*.pyc
+__pycache
+/__pycache__
+/__pycache__/
+__pycache__/
+
+# don't want the static folder since it is generated
+static/
+files/
+
+# hmcclungiii - had to add the following line when
+# adding the gecko driver, we don't need its log
+# file in the repository
+geckodriver.log
